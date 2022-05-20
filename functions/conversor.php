@@ -28,5 +28,5 @@
    return ($temperatura-32)*5/9;
   }
   function CparaK($temperatura){
-    return (FtoC($temperatura) + 273);
+    return (FparaC($temperatura) + 273);
    }
