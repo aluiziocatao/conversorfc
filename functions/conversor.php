@@ -13,20 +13,20 @@
   @$temp = $_GET['number'];
   
   if($op == 1){
-   echo "<div class='alert alert-primary mt-3' role='alert'>Temperatura em Farenheit: ".CtoF($temp)."</div>";
+   echo "<div class='alert alert-primary mt-3' role='alert'>Temperatura em Farenheit: ".CparaF($temp)."</div>";
   }else if($op == 2){
-   echo "<div class='alert alert-success mt-3' role='alert'>Temperatura em Celsius: ".FtoC($temp)."</div>";
-   echo "<div class='alert alert-info mt-3' role='alert'>Temperatura em Kelvin: ".CtoK($temp)."</div>";
+   echo "<div class='alert alert-success mt-3' role='alert'>Temperatura em Celsius: ".FparaC($temp)."</div>";
+   echo "<div class='alert alert-info mt-3' role='alert'>Temperatura em Kelvin: ".CparaK($temp)."</div>";
   }else if(!empty($op)){
    echo "<div class='alert alert-danger mt-3' role='alert'>Opção inválida</div>";
   }
   
-  function CtoF($temperatura){
+  function CparaF($temperatura){
    return ($temperatura*9/5) + 32;
   }
-  function FtoC($temperatura){
+  function FparaC($temperatura){
    return ($temperatura-32)*5/9;
   }
-  function CtoK($temperatura){
+  function CparaK($temperatura){
     return (FtoC($temperatura) + 273);
    }
